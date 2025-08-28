@@ -13,9 +13,28 @@ st.divider()
 
 st.subheader("Upload Student Data (CSV/Excel)")
 uploaded = st.file_uploader("Drag and drop file here", type=["csv","xlsx"])
-
 sheet_name = st.text_input("Excel sheet name (for .xlsx only)", value="Sheet1")
 
+if uploaded is not None:
+    try:
+        ext = Path(uploaded.name).suffix.lower()
+        if ext == ".csv":
+            uploaded.seek(0)
+            df_raw = pd.read_csv(uploaded)
+            df_preview = tut01.normalize_dataframe_columns(df_raw)
+            st.markdown("#### Preview (first 10 rows)")
+            st.dataframe(df_preview.head(10), use_container_width=True)
+            st.caption(f"{df_preview.shape} rows × {df_preview.shape[1]} columns after normalization")
+        elif ext == ".xlsx":
+            uploaded.seek(0)
+            df_x = pd.read_excel(uploaded, sheet_name=sheet_name, dtype=str)
+            st.markdown("#### Preview (first 10 rows)")
+            st.dataframe(df_x.head(10), use_container_width=True)
+            st.caption(f"{df_x.shape} rows × {df_x.shape[1]} columns (raw Excel sheet)")
+        else:
+            st.warning("Unsupported file type. Please upload a .csv or .xlsx file.")
+    except Exception as e:
+        st.warning(f"Could not preview file: {e}")
 col1, col2 = st.columns(2)
 with col1:
     mix_k = st.number_input("Branchwise Mix: number of groups", min_value=1, step=1, value=3)
@@ -44,26 +63,7 @@ if clear_btn:
     except Exception as e:
         st.error(f"Failed to clear output: {e}")
 
-if uploaded is not None:
-    try:
-        ext = Path(uploaded.name).suffix.lower()
-        if ext == ".csv":
-            uploaded.seek(0)
-            df_raw = pd.read_csv(uploaded)
-            df_preview = tut01.normalize_dataframe_columns(df_raw)
-            st.markdown("#### Preview (first 10 rows)")
-            st.dataframe(df_preview.head(10), use_container_width=True)
-            st.caption(f"{df_preview.shape} rows × {df_preview.shape[1]} columns after normalization")
-        elif ext == ".xlsx":
-            uploaded.seek(0)
-            df_x = pd.read_excel(uploaded, sheet_name=sheet_name, dtype=str)
-            st.markdown("#### Preview (first 10 rows)")
-            st.dataframe(df_x.head(10), use_container_width=True)
-            st.caption(f"{df_x.shape} rows × {df_x.shape[1]} columns (raw Excel sheet)")
-        else:
-            st.warning("Unsupported file type. Please upload a .csv or .xlsx file.")
-    except Exception as e:
-        st.warning(f"Could not preview file: {e}")
+
 
 if generate_btn:
     if uploaded is None:
