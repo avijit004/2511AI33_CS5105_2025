@@ -6,10 +6,10 @@
 
 📂 Repository Structure
 2511AI33_CS5105_2025/
-│
-├── Arrays/                     # Array-based coding problems
-├── DP/                         # Dynamic Programming problems
-├── Graphs/                     # Graph theory & algorithms
+|
+|--Arrays/                     # Array-based coding problems
+|--DP/                         # Dynamic Programming problems
+|--Graphs/                     # Graph theory & algorithms
 │
 ├── Seating_Arrangement_DAA/    # Full Streamlit + Docker project
 │   ├── app.py
@@ -31,4 +31,3 @@ This repository contains all coursework, coding assignments, and project work fo
 This repository is for academic and learning purposes under the IIT Patna DAA coursework.
 
 ⭐ If this repo helped you, consider giving it a star!
-<p align="center"> <img src="https://tenor.com/en-GB/view/ami-bụng-bự-gif-16616139938733218658" width="280"> </p>
