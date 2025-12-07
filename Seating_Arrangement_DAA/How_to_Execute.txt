@@ -1,0 +1,14 @@
+To execute the project locally:
+
+Open a terminal in the project folder and install deps:
+pip install -r requirements.txt
+
+Run the core script:
+python app.py
+
+Or run the Streamlit web app:
+streamlit run streamlit.py
+
+With Docker instead of local Python:
+docker build -t seating-app .
+docker run -p 8501:8501 seating-app
