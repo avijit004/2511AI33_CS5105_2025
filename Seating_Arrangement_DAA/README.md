@@ -14,23 +14,23 @@ It aims to:
 
 
 🧩 Features
-🔹 1. Intelligent Seating Allocation
+🔹 1. Intelligent Seating Allocation:
 Reads Excel/CSV student + room data
 Distributes students optimally
 Avoids clustering of same-class students
 
-🔹 2. Streamlit Web UI
+🔹 2. Streamlit Web UI:
 Upload input data
 Generate seating plan
 Visual layout & table view
 No coding required
 
-🔹 3. Full Logging System
+🔹 3. Full Logging System:
 app.log → Application events
 seating_alloc.log → Allocation logic
 errors.txt → Debugging trace
 
-🔹 4. Docker Support (One-Click Deploy)
+🔹 4. Docker Support (One-Click Deploy):
 Works on any system
 No Python installation needed
 
@@ -136,4 +136,5 @@ docker-compose up --build
 ✨ Support multiple exams / sessions
 ✨ Auto-email seat allotments to students
 ✨ Admin dashboard for bulk uploads
+
 
