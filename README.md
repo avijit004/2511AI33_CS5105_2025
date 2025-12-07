@@ -7,7 +7,6 @@
 
 📂 Repository Structure
 2511AI33_CS5105_2025/
-│
 ├── Arrays/                     # Array-based coding problems
 ├── DP/                         # Dynamic Programming problems
 ├── Graphs/                     # Graph theory & algorithms
