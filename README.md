@@ -3,6 +3,8 @@
 <p align="center"> <img src="https://media.tenor.com/2roX3uxz_4IAAAAM/coding.gif" width="420" /> </p> <p align="center"> <b>Algorithm Problems ▪ Dynamic Programming ▪ Graphs ▪ Streamlit Project ▪ IIT Patna Coursework</b> </p>
 🔰 Badges
 <p align="left"> <!-- Shields.io Badges --> <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/Streamlit-App-red?logo=streamlit" /> <img src="https://img.shields.io/badge/Docker-Supported-blue?logo=docker" /> <img src="https://img.shields.io/badge/IIT%20Patna-DAA%20Course-yellow" /> <img src="https://img.shields.io/badge/Status-Active-brightgreen" /> <img src="https://img.shields.io/github/last-commit/avijit004/2511AI33_CS5105_2025" /> </p>
+
+
 📂 Repository Structure
 2511AI33_CS5105_2025/
 │
@@ -21,6 +23,7 @@
 ├── Tut_02/                    # Tutorial 2 solutions
 │
 └── 2511AI33_Avijit_Resume.pdf
+
 
 
 🎯 About This Repository
